@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-cream: #f3ecdd;
+  --color-navy-deep: #0f1e3d;
+  --color-navy: #1e3a6b;
+  --color-crimson: #c0332c;
+  --color-ink: #141414;
+  --color-paper: #ffffff;
+  --color-muted: #a8a094;
+
+  /* Typography — CSS vars injected by next/font */
+  --font-sans: var(--font-epilogue), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-bold-serif: var(--font-crimson-pro), Georgia, serif;
+
+  /* Sizing */
+  --sidebar-width: 240px;
+  --topbar-height: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-navy);
+}
